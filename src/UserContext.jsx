@@ -38,7 +38,6 @@ export const UserStorage = ({ children }) => {
       const tokenResponse = await fetch(url, options);
 
       if (!tokenResponse.ok) {
-        console.log(tokenResponse)
         throw new Error(`Error: ${tokenResponse.statusText}`)
       }
 
@@ -77,6 +76,8 @@ export const UserStorage = ({ children }) => {
         } finally {
           setLoading(false);
         }
+      } else {
+        setLogin(false)
       }
     }
 
