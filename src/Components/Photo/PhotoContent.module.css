@@ -1,6 +1,6 @@
 .photo {
   margin: auto;
-  height: 100%;
+  height: 36rem;
   border-radius: .2rem;
   background: white;
   display: grid;
@@ -43,7 +43,39 @@
   text-decoration: underline;
 }
 
+.visualizacoes::before{
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  margin-right: 0.5rem;
+  background: url('../../Assets/visualizacao-black.svg');
+}
 
+.attributes{
+  display: flex;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.attributes li {
+  margin-right: 2rem;
+}
+
+.attributes li::before{
+  content: "";
+  display: inline-block;
+  height: 20px;
+  margin-right: .5rem;
+  position: relative;
+  top: 3px;
+  width: 2px;
+  background: #333;
+  margin-top: 5px;
+}
 
 @media(max-width: 64rem) {
   .photo {
