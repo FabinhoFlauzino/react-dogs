@@ -1,0 +1,44 @@
+.comments {
+  overflow-y: auto;
+  word-break: break-all;
+  padding: 1rem;
+}
+
+.comments li {
+  margin-bottom: .5rem;
+  line-height: 1.2;
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.comments li b {
+  text-transform: uppercase;
+  display: flex;
+align-items: center;
+}
+
+.comments li b::before{
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  background: url('../../Assets/enviar.svg') no-repeat center center;
+  background-size: contain;
+  border: 1px solid #333;
+  border-radius: 50%;
+} 
+
+.comments li span {
+  display: block;
+  margin-top: .2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 64rem) {
+  .comments {
+    height: 400px;
+  }
+  
+}
