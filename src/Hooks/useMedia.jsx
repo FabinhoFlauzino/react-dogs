@@ -6,13 +6,13 @@ const useMedia = (media) => {
   useEffect(() => {
     function changeMatch() {
       const { matches } = matchMedia(media);
-      setMatch(matches)
+      setMatch(matches);
     }
-    changeMatch()
-    addEventListener('resize', changeMatch)
+    changeMatch();
+    addEventListener("resize", changeMatch);
     return () => {
-      removeEventListener('resize', changeMatch)
-    }
+      removeEventListener("resize", changeMatch);
+    };
   }, [media]);
 
   return match;

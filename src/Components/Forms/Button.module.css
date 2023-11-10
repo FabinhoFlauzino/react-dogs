@@ -16,12 +16,12 @@
 }
 
 .button:hover,
-.button:focus{
+.button:focus {
   outline: none;
   box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
 }
 
-.button:disabled{
+.button:disabled {
   opacity: .5;
   cursor: wait;
 }

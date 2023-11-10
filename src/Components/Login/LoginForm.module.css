@@ -1,4 +1,4 @@
-.form{
+.form {
   margin-bottom: 2rem;
 }
 
@@ -8,15 +8,15 @@
   padding: 0.5rem 0;
 }
 
-.perdeu::after{
-  content:"";
+.perdeu::after {
+  content: "";
   height: 1.5px;
   width: 100%;
   background: currentColor;
   display: block;
 }
 
-.cadastro{
+.cadastro {
   margin-top: 4rem;
 }
 
@@ -24,13 +24,13 @@
   margin-block: 2rem;
 }
 
-.subtitle{
+.subtitle {
   font-family: var(--type-second);
   line-height: 1;
   font-size: 2rem;
 }
 
-.subtitle::after{
+.subtitle::after {
   content: "";
   display: block;
   background: #ddd;

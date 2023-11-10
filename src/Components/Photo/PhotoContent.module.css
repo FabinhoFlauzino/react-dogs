@@ -33,7 +33,7 @@
 
 .author {
   opacity: .5;
-  margin-bottom:  1rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,7 @@
   text-decoration: underline;
 }
 
-.visualizacoes::before{
+.visualizacoes::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -52,7 +52,7 @@
   background: url('../../Assets/visualizacao-black.svg');
 }
 
-.attributes{
+.attributes {
   display: flex;
   font-size: 1.125rem;
   font-weight: bold;
@@ -65,7 +65,7 @@
   margin-right: 2rem;
 }
 
-.attributes li::before{
+.attributes li::before {
   content: "";
   display: inline-block;
   height: 20px;

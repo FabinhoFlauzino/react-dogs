@@ -35,7 +35,7 @@
   color: #fb1;
 }
 
-.nav a:global(.active) svg > * {
+.nav a:global(.active) svg>* {
   fill: #fb1;
 }
 
@@ -43,7 +43,7 @@
   padding: 0;
 }
 
-.mobileButton::after{
+.mobileButton::after {
   content: '';
   display: block;
   width: 1.2rem;
@@ -56,7 +56,7 @@
 
 .mobileButton:focus,
 .mobileButton:hover,
-.mobileButtonActive{
+.mobileButtonActive {
   outline: none;
   background: white;
   box-shadow: 0 0 0 3px #fea;
@@ -94,7 +94,7 @@
 }
 
 .navMobile a,
-.navMobile button{
+.navMobile button {
   display: flex;
   align-items: center;
   background: none;
@@ -105,13 +105,13 @@
   cursor: pointer;
 }
 
-.navMobile a:hover svg > *,
-.navMobile button:hover svg > *{
+.navMobile a:hover svg>*,
+.navMobile button:hover svg>* {
   fill: #fb1;
 }
 
 
-.navMobile button{
+.navMobile button {
   border-bottom: none;
 }
 

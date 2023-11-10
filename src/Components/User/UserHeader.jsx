@@ -10,14 +10,14 @@ const UserHeader = () => {
   useEffect(() => {
     const { pathname } = location;
     switch (pathname) {
-      case '/conta/postar':
-        setTitle('Poste sua Foto')
+      case "/conta/postar":
+        setTitle("Poste sua Foto");
         break;
-      case '/conta/estatisticas':
-        setTitle('Estatísticas')
-        break
+      case "/conta/estatisticas":
+        setTitle("Estatísticas");
+        break;
       default:
-        setTitle('Minha Conta')
+        setTitle("Minha Conta");
         break;
     }
   }, [location]);

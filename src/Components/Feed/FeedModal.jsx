@@ -14,9 +14,9 @@ const FeedModal = ({ photo, setModalPhoto }) => {
     request(url, options);
   }, [photo, request]);
 
-  function handleOutSideClick(event){
-    if(event.target === event.currentTarget){
-      setModalPhoto(null)
+  function handleOutSideClick(event) {
+    if (event.target === event.currentTarget) {
+      setModalPhoto(null);
     }
   }
 
@@ -24,7 +24,7 @@ const FeedModal = ({ photo, setModalPhoto }) => {
     <div className={styles.modal} onClick={handleOutSideClick}>
       {error && <Error error={error} />}
       {loading && <Loading />}
-      {data && <PhotoContent data={data}/>}
+      {data && <PhotoContent data={data} />}
     </div>
   );
 };

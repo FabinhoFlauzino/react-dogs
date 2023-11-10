@@ -9,47 +9,46 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const userLogout = useCallback(
-    async function userLogout() {
-      setData(null);
-      setError(null);
-      setLoading(false);
-      setLogin(false);
-      localStorage.removeItem("token");
-    }, [])
+  const userLogout = useCallback(async function userLogout() {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(false);
+    localStorage.removeItem("token");
+  }, []);
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
     const json = await response.json();
-    setData(json)
-    setLogin(true)
+    setData(json);
+    setLogin(true);
   }
 
   async function userLogin(username, password) {
     try {
-      setError(null)
-      setLoading(true)
+      setError(null);
+      setLoading(true);
 
       const { url, options } = TOKEN_POST({ username, password });
       const tokenResponse = await fetch(url, options);
 
       if (!tokenResponse.ok) {
-        throw new Error(`Error: ${tokenResponse.statusText}`)
+        throw new Error(`Error: ${tokenResponse.statusText}`);
       }
 
       const { token } = await tokenResponse.json();
       localStorage.setItem("token", token);
 
-      await getUser(token)
-      navigate('/conta')
+      await getUser(token);
+      navigate("/conta");
     } catch (error) {
       setError(error.message);
-      setLogin(false)
+      setLogin(false);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
@@ -71,12 +70,12 @@ export const UserStorage = ({ children }) => {
 
           await getUser(token);
         } catch (error) {
-          userLogout()
+          userLogout();
         } finally {
           setLoading(false);
         }
       } else {
-        setLogin(false)
+        setLogin(false);
       }
     }
 
@@ -84,7 +83,9 @@ export const UserStorage = ({ children }) => {
   }, [userLogout]);
 
   return (
-    <UserContext.Provider value={{ userLogin, userLogout, data, error, loading, login }}>
+    <UserContext.Provider
+      value={{ userLogin, userLogout, data, error, loading, login }}
+    >
       {children}
     </UserContext.Provider>
   );

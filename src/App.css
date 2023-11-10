@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   padding-top: 4rem;
@@ -14,29 +14,35 @@ body{
   font-family: var(--type-first);
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
 }
 
-ul,li{
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
 }
 
-button, input{
+button,
+input {
   display: block;
   font-size: 1rem;
   font-family: var(--type-first);
   color: #333;
 }
 
-a{
+a {
   text-decoration: none;
   color: #333;
 }
@@ -51,7 +57,7 @@ a{
   margin-top: 4rem;
 }
 
-.title{
+.title {
   font-family: var(--type-second);
   line-height: 1;
   font-size: 3rem;
@@ -60,7 +66,7 @@ a{
   z-index: 1;
 }
 
-.title::after{
+.title::after {
   content: "";
   display: block;
   width: 1.5rem;
@@ -73,14 +79,14 @@ a{
   z-index: -1;
 }
 
-.animeLeft{
+.animeLeft {
   opacity: 0;
   transform: translateX(-20px);
   animation: animeLeft .3s forwards;
 }
 
 @keyframes animeLeft {
-  to{
+  to {
     opacity: 1;
     transform: initial;
   }

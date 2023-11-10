@@ -1,5 +1,5 @@
 .header {
-  box-shadow: 0px 1px 1px rgba(0,0,0, 0.1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -14,17 +14,17 @@
   height: 4rem;
 }
 
-.logo{
+.logo {
   padding: .5rem 0;
 }
 
-.login{
+.login {
   color: #333;
   display: flex;
   align-items: center;
 }
 
-.login::after{
+.login::after {
   content: '';
   display: inline-block;
   width: 14px;
