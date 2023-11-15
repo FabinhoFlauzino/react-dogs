@@ -12,6 +12,11 @@
   animation: scaleUp .3s forwards;
 }
 
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
 @keyframes scaleUp {
   to {
     opacity: initial;
@@ -25,6 +30,16 @@
 
 .img {
   grid-row: 1/4;
+}
+
+.single .details{
+  padding: 1rem 0px 0px 0px;
+}
+
+.single .img {
+  grid-row: 1;
+  border-radius: .4rem;
+  overflow: hidden;
 }
 
 .comments {
@@ -83,6 +98,10 @@
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
+  }
+
+  .single.photo {
+    max-height: 100%;
   }
 
   .img {
