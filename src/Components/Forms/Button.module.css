@@ -1,7 +1,7 @@
 .button {
   display: block;
   text-align: center;
-  max-width: 128px;
+  max-width: 130px;
   font-size: 1rem;
   font-family: var(--type-first);
   cursor: pointer;
