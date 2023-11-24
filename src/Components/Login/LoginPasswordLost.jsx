@@ -5,6 +5,7 @@ import useForm from "../../Hooks/useForm"
 import useFetch from "../../Hooks/useFetch"
 import Error from "../Helper/Error"
 import { PASSWORD_LOST } from "../../api";
+import Head from "../Helper/Head";
 
 const LoginPasswordLost = () => {
   const login = useForm()
@@ -21,7 +22,11 @@ const LoginPasswordLost = () => {
     }
   }
 
-  return <section>
+  return <section className="animeLeft">
+    <Head
+        title="Perdeu a senha?"
+        description="Recuperar a senha"
+      />
     <h1 className="title">Perdeu a Senha?</h1>
     {data ? <p style={{color: '#4c1', fontSize: '1.5rem'}}>{data}</p> : (
       <form onSubmit={handleSubmit}>
